@@ -47,5 +47,7 @@
 	
 
 ?>
+<br>
+<a href="index.html"><P>go back</P></a>
 </body>
 </html>
