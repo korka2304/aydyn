@@ -11,22 +11,24 @@
 	    or die('Error: Unable to connect: ' . mysqli_connect_error());
 	printf('<P>Succesfully connected!</P> %s',"\n");
 
-	$SQLquery = 'SELECT * FROM 4elovek';
+	$SQLquery = 'SELECT * FROM arenda';
 	$SQLresult = mysqli_query($link,$SQLquery);
 
 	printf('<table cellspacing=\' 0 \' border=\' 1 \'> %s',"\n");
 	printf('<TR> %s',"\n");
-	printf('	<TH>Family Name</TH> %s',"\n");
-	printf('	<TH>First Name</TH> %s',"\n");
-	printf('	<TH>Father name</TH> %s',"\n");
-	printf('	<TH>Passport data</TH> %s',"\n");
+	printf('	<TH>4elovek_id_4elovek</TH> %s',"\n");
+	printf('	<TH>kvartiri_id_kvartiri</TH> %s',"\n");
+	printf('	<TH>oplata v mesac</TH> %s',"\n");
+	printf('	<TH>predoplata</TH> %s',"\n");
+	printf('	<TH>arenda begin</TH> %s',"\n");
+	printf('	<TH>arenda end</TH> %s',"\n");
 	printf('</TR> %s',"\n");
 
 
 	while ($result = mysqli_fetch_array($SQLresult,MYSQLI_NUM))
 	{
 		printf('<TR>');
-		printf('<TD> %s </TD> <TD> %s </TD> <TD> %s </TD> <TD> %s </TD>',$result[1],$result[2],$result[3],$result[4]);
+		printf('<TD> %s </TD> <TD> %s </TD> <TD> %s </TD> <TD> %s </TD> <TD> %s </TD> <TD> %s </TD>',$result[1],$result[2],$result[3],$result[4],$result[5],$result[6]);
 		printf('</TR> %s',"\n");
 	}
 	printf('</table> %s',"\n");
