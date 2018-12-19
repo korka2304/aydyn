@@ -18,33 +18,32 @@
 		</TR>
 		<TR>
 			<TD>
-			  <a href="allbooks.php"> <P>All</P> </a>
-			  <a href="counteries.php"> <P>List of all Counteries</P> </a>
+			  <a href="allbooks.php"> <P>All books</P> </a>
+			  <a href="dostojevsky.php"> <P>Books of Dostojevsky</P> </a>
+			  <a href="add_book.php"> <P>Add new Book</P> </a> 
 			  <a href="users.php"> <P>Our Staff</P> </a>
-			  <a href="users1.php"> <P>Preparite</P> </a> 
+			  <a href="authors.php"> <P>Authors</P> </a> 
 			</TD>
 			<TD>
-			  <P>Preparite:</P>
-			  <form action="preparite_from.php" method="post">
-          		  	Title: <input type="text" name="b_t">
+			  <P>Add New Book:</P>
+			  <form action="add_book_form_action.php" method="post">
+          		  	Title: <input type="text" name="book_title">
           		  	<br>
-				Year: <input type="number" name="b_y">
+				Year: <input type="number" name="book_year">
           		  	<br>
 				Author: 
-				<select name="b_a">
+				<select name="book_authorid">
 					<?php 
 		                        include('config.php');	
 					$link = mysqli_connect($server, $user, $password, $database)					
 	    					or die('Error: Unable to connect: ' . mysqli_connect_error());
 						
-					// Выполняем SQL-запрос
 					$SQLquery = 'SELECT AuthorID, CONCAT(FirstName, \' \', FamilyName) FROM authors';
 					$SQLresult = mysqli_query($link,$SQLquery);
 					while ($result = mysqli_fetch_array($SQLresult,MYSQLI_NUM))
 					{
 						printf('<option value=%d>%s</option>',$result[0],$result[1]);
 					}
-					// Освобождаем память от результата
 					mysqli_free_result($SQLresult);
 					mysqli_close($link);
 					?>
