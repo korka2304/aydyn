@@ -5,28 +5,37 @@
  </head>
  <body>
 	<?php
-	printf('<P>Hello world! List of Library users:</P>');
+	printf('<P>Hello world! Searching for every book:</P> %s',"\n");
 	// Соединяемся, выбираем базу данных VER3
+
 	include('config.php');	
 	$link = mysqli_connect($server, $user, $password, $database)
 	    or die('Error: Unable to connect: ' . mysqli_connect_error());
-	echo '<P>Succesfully connected!</P>';
+	printf('<P>Succesfully connected!</P> %s',"\n");
 	
 	// Выполняем SQL-запрос
-	$SQLquery = 'SELECT * FROM users';
+	$SQLquery = 'SELECT * FROM Country';
 	$SQLresult = mysqli_query($link,$SQLquery);
+
+	printf('<table cellspacing=\' 0 \' border=\' 1 \'> %s',"\n");
+	printf('<TR> %s',"\n");
+	printf('	<TH>ID</TH> %s',"\n");
+	printf('	<TH>Country</TH> %s',"\n");
+	printf('</TR> %s',"\n");
+
 	while ($result = mysqli_fetch_array($SQLresult,MYSQLI_NUM))
 	{
-		printf('<P>User: %s, e-mail: %s </P>',$result[1],$result[3]);
+		printf('<TR>');
+		printf('<TD> %s </TD> <TD>%s</TD> ',$result[0],$result[1]);
+		printf('</TR> %s',"\n");
 	}
+	printf('</table> %s',"\n");
 	// Освобождаем память от результата
 	mysqli_free_result($SQLresult);
 	mysqli_close($link);
 
 ?>
-
 <BR>
 <a href="index.html"> <P>GO BACK</P> </a>
-
  </body>
 </html>

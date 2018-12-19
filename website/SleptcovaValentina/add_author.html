@@ -23,10 +23,16 @@
 			  <a href="add_book.php"> <P>Add new Book</P> </a> 
 			  <a href="users.php"> <P>Our Staff</P> </a>
 			  <a href="authors.php"> <P>Authors</P> </a> 
-				
 			</TD>
 			<TD>
-			  <img src="images/library.jpg" alt="This is how my library will look like" />			
+			  <P>Add Author:</P>
+			  <form action="add_author_form_action.php" method="post">
+          		  	First Name: <input type="text" name="first_name">
+          		  	<br>
+				Family Name: <input type="text" name="family_name">
+          		  	<br>
+            		  	<input type="submit" value="Add Author">
+      			  </form>
 			</TD>
 		</TR>
 

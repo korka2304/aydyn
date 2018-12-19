@@ -1,6 +1,6 @@
 cd ..\..
 echo Глобальная настйрока переменных, достаточно выполнить 1 раз
-git config --global user.name NEFUstudents
+git config --global user.name NEFUstudent
 git config --global user.email study.svfu@gmail.com
 echo Добавим трекинг всех новых файлов
 git add -A
