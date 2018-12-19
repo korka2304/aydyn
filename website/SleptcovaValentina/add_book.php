@@ -38,14 +38,12 @@
 					$link = mysqli_connect($server, $user, $password, $database)					
 	    					or die('Error: Unable to connect: ' . mysqli_connect_error());
 						
-					// Выполняем SQL-запрос
 					$SQLquery = 'SELECT AuthorID, CONCAT(FirstName, \' \', FamilyName) FROM authors';
 					$SQLresult = mysqli_query($link,$SQLquery);
 					while ($result = mysqli_fetch_array($SQLresult,MYSQLI_NUM))
 					{
 						printf('<option value=%d>%s</option>',$result[0],$result[1]);
 					}
-					// Освобождаем память от результата
 					mysqli_free_result($SQLresult);
 					mysqli_close($link);
 					?>
