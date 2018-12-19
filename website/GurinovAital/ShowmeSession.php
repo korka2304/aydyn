@@ -28,9 +28,10 @@
 
 	while ($result = mysqli_fetch_array($SQLresult,MYSQLI_NUM))
 	{
-		if ($result[4]==0) {$result[4]='YES'} else {$result[4]='NO'}
-		printf('<TR>');
-		{printf('<TD> %d </TD> <TD>%d</TD> <TD>%F</TD> <TD>%T</TD> <TD>%s</TD>',$result[0],$result[1],$result[2],$result[3],$result[4]);}
+		if ($result[4]==1)
+		{printf('<TD> %d </TD> <TD>%d</TD> <TD>%F</TD> <TD>%T</TD> <TD>%s</TD>',$result[0],$result[1],$result[2],$result[3],'YES');}
+		else
+		{printf('<TD> %d </TD> <TD>%d</TD> <TD>%F</TD> <TD>%T</TD> <TD>%s</TD>',$result[0],$result[1],$result[2],$result[3],'NO');
 		printf('</TR> %s',"\n");
 	}
 	printf('</table> %s',"\n");
