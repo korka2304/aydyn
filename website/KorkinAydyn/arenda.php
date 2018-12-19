@@ -15,15 +15,14 @@ $SQLquery = 'SELECT * FROM Arenda';
 $SQLresult = mysqli_query($link,$SQLquery);
 printf('<table cellspacing=\' 0 \' border=\' 1 \'> %s',"\n");
 	printf('<TR> %s',"\n");
-	printf('	<TH>ClientPass</TH> %s',"\n");
-	printf('	<TH>Oplata</TH> %s',"\n");
-	printf('	<TH>bankShet</TH> %s',"\n");
-	printf('	<TH>ArendaPrice</TH> %s',"\n");
+	printf('	<TH>price</TH> %s',"\n");
+	printf('	<TH>predoplata</TH> %s',"\n");
+	printf('	<TH>objAdress</TH> %s',"\n");
 	printf('</TR> %s',"\n");
 while ($result = mysqli_fetch_array($SQLresult,MYSQLI_NUM))
 	{
 		printf('<TR>');
-		printf('<TD> %d </TD> <TD>%d </TD> %d</TD> <TD> %D </TD> ',$result[0],$result[1],$result[2],$result[3]);
+		printf('<TD> %d </TD> <TD>%d </TD> %s</TD> ',$result[0],$result[1],$result[2]);
 		printf('</TR> %s',"\n");
 	}
 	printf('</table> %s',"\n");
