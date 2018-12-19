@@ -11,7 +11,7 @@
 	    or die('Error: Unable to connect: ' . mysqli_connect_error());
 	printf('<P>Succesfully connected!</P> %s',"\n");
 	
-	$SQLquery = 'SELECT a.ID,a.Name,b.Name,c."Medical name" FROM `DrugsNew` as a INNER JOIN `Makers` as b on a.Maker=b.ID INNER JOIN `Medicine` as c on a.Medicine=c.ID';
+	$SQLquery = 'SELECT * FROM `DrugsNew`';
 	$SQLresult = mysqli_query($link,$SQLquery);
 
 	printf('<table cellspacing=\' 0 \' border=\' 1 \'> %s',"\n");
@@ -25,7 +25,7 @@
 	while ($result = mysqli_fetch_array($SQLresult,MYSQLI_NUM))
 	{
 		printf('<TR>');
-		printf('<TD> %s </TD> <TD>%s</TD> <TD> %s  </TD><TD> %s  </TD>',$result[0],$result[1],$result[2],$result[3]);
+		printf('<TD> %s </TD> <TD>%s</TD> <TD> %s  </TD><TD> %s  </TD><TD> %s  </TD><TD> %s  </TD>',$result[0],$result[1],$result[2],$result[3],$result[4],$result[5]);
 		printf('</TR> %s',"\n");
 	}
 	printf('</table> %s',"\n");
