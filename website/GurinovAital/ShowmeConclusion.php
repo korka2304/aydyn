@@ -13,26 +13,21 @@
 	printf('<P>Successfully connected!</P> %s',"\n");
 	
 	// Выполняем SQL-запрос
-	$SQLquery = 'SELECT * FROM Doctor';
+	$SQLquery = 'SELECT * FROM Conclusion';
 	$SQLresult = mysqli_query($link,$SQLquery);
 
 	printf('<table cellspacing=\' 10 \' border=\' 1 \'> %s',"\n");
 	printf('<TR> %s',"\n");
-	printf('	<TH>idDoctor</TH> %s',"\n");
-	printf('	<TH>Fullname</TH> %s',"\n");
-	printf('	<TH>Diploma</TH> %s',"\n");
-	printf('	<TH>Worktime</TH> %s',"\n");
-	printf('	<TH>Spec</TH> %s',"\n");
+	printf('	<TH>idConclusion</TH> %s',"\n");
+	printf('	<TH>Name</TH> %s',"\n");
+	printf('	<TH>What to do?</TH> %s',"\n");
 	printf('</TR> %s',"\n");
 
 
 	while ($result = mysqli_fetch_array($SQLresult,MYSQLI_NUM))
 	{
 		printf('<TR>');
-		if ($result[2]==1)
-		{printf('<TD> %d </TD> <TD>%s</TD> <TD>%s</TD> <TD>%s</TD> <TD> %d </TD>',$result[0],$result[1],'YES',$result[3],$result[4]);}
-		else 
-		{printf('<TD> %d </TD> <TD>%s</TD> <TD>%s</TD> <TD>%s</TD> <TD> %d </TD>',$result[0],$result[1],'NO',$result[3],$result[4]);};
+		{printf('<TD> %d </TD> <TD>%s</TD> <TD>%s</TD>',$result[0],$result[1],$result[2]);}
 		printf('</TR> %s',"\n");
 	}
 	printf('</table> %s',"\n");
