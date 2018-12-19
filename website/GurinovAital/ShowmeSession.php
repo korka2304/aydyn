@@ -30,7 +30,7 @@
 	{
 		if ($result[4]==0) {$result[4]='YES'} else {$result[4]='NO'}
 		printf('<TR>');
-		{printf('<TD> %d </TD> <TD>%d</TD> <TD>%s</TD> <TD>%s</TD> <TD>%s</TD>',$result[0],$result[1],$result[2],$result[3],$result[4]);}
+		{printf('<TD> %d </TD> <TD>%d</TD> <TD>%F</TD> <TD>%T</TD> <TD>%s</TD>',$result[0],$result[1],$result[2],$result[3],$result[4]);}
 		printf('</TR> %s',"\n");
 	}
 	printf('</table> %s',"\n");
