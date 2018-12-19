@@ -18,7 +18,9 @@
 	printf('<TR> %s',"\n");
 	printf('	<TH>ID</TH> %s',"\n");
 	printf('	<TH>Name</TH> %s',"\n");
+	printf('	<TH>Image</TH> %s',"\n");
 	printf('	<TH>Maker</TH> %s',"\n");
+	printf('	<TH>Storage time</TH> %s',"\n");
 	printf('	<TH>Medicine</TH> %s',"\n");
 	printf('</TR> %s',"\n");
 	
