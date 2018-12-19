@@ -13,21 +13,21 @@
 	printf('<P>Successfully connected!</P> %s',"\n");
 	
 	// Выполняем SQL-запрос
-	$SQLquery = 'SELECT * FROM Conclusion';
+	$SQLquery = 'SELECT * FROM Spec';
 	$SQLresult = mysqli_query($link,$SQLquery);
 
 	printf('<table cellspacing=\' 10 \' border=\' 1 \'> %s',"\n");
 	printf('<TR> %s',"\n");
-	printf('	<TH>idConclusion</TH> %s',"\n");
-	printf('	<TH>Name</TH> %s',"\n");
-	printf('	<TH>What to do?</TH> %s',"\n");
+	printf('	<TH>idSpec</TH> %s',"\n");
+	printf('	<TH>Spec Name</TH> %s',"\n");
+	printf('	<TH>Cab.</TH> %s',"\n");
 	printf('</TR> %s',"\n");
 
 
 	while ($result = mysqli_fetch_array($SQLresult,MYSQLI_NUM))
 	{
 		printf('<TR>');
-		{printf('<TD> %d </TD> <TD>%s</TD> <TD>%s</TD>',$result[0],$result[1],$result[2]);}
+		{printf('<TD> %d </TD> <TD>%s</TD> <TD>%d</TD>',$result[0],$result[1],$result[2]);}
 		printf('</TR> %s',"\n");
 	}
 	printf('</table> %s',"\n");
