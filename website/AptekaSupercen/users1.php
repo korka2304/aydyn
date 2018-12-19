@@ -26,11 +26,11 @@
 			<TD>
 			  <P>Preparite:</P>
 			  <form action="preparite_from.php" method="post">
-          		  	Title: <input type="text" name="b_t">
+          		  	Name: <input type="text" name="b_t">
           		  	<br>
-				Year: <input type="number" name="b_y">
+				ID: <input type="number" name="b_y">
           		  	<br>
-				Author: 
+				Postav: 
 				<select name="b_a">
 					<?php 
 		                        include('config.php');	
@@ -38,7 +38,7 @@
 	    					or die('Error: Unable to connect: ' . mysqli_connect_error());
 						
 					// Выполняем SQL-запрос
-					$SQLquery = 'SELECT AuthorID, CONCAT(FirstName, \' \', FamilyName) FROM authors';
+					$SQLquery = 'SELECT ID_int, CONCAT(Name, \' \', postav) FROM Drug';
 					$SQLresult = mysqli_query($link,$SQLquery);
 					while ($result = mysqli_fetch_array($SQLresult,MYSQLI_NUM))
 					{
@@ -50,7 +50,7 @@
 					?>
 				</select>
 				<br>
-            		  	<input type="submit" value="Add Book">
+            		  	<input type="submit" value="Add">
       			  </form>
 			</TD>
 		</TR>
