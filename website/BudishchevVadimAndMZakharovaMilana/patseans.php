@@ -22,13 +22,12 @@
 	printf('	<TH>Seans_id</TH> %s',"\n");
 	printf('	<TH>Patients_id</TH> %s',"\n");
 	printf('	<TH>Result</TH> %s',"\n");
-	printf('	<TH>Patients FIO</TH> %s',"\n");
 	printf('</TR> %s',"\n");
 
         while ($result = mysqli_fetch_array($SQLresult,MYSQLI_NUM))
 	{
 		printf('<TR>');
-		printf('<TD> %d </TD> <TD>%d</TD> <TD> %s </TD> <TD> %s </TD>',$result[0],$result[1],$result[2],$result[3]);
+		printf('<TD> %d </TD> <TD>%d</TD> <TD> %s </TD>',$result[0],$result[1],$result[2]);
 		printf('</TR> %s',"\n");
 	}
 	printf('</table> %s',"\n");
