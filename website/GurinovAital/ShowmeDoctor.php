@@ -13,7 +13,7 @@
 	printf('<P>Successfully connected!</P> %s',"\n");
 	
 	// Выполняем SQL-запрос
-	$SQLquery = 'select Doctor.idDoctor, Doctor.FullName, Doctor.Diploma, Doctor.Worktime, Spec.SpecName, Spec.Cabinet,  from Doctor inner join Spec on Doctor.Spec=Spec.idSpec';
+	$SQLquery = 'select Doctor.idDoctor, Doctor.FullName, Doctor.Diploma, Doctor.Worktime, Spec.SpecName, Spec.Cabinet from Doctor inner join Spec on Doctor.Spec=Spec.idSpec';
 	$SQLresult = mysqli_query($link,$SQLquery);
 
 	printf('<table cellspacing=\' 10 \' border=\' 1 \'> %s',"\n");
