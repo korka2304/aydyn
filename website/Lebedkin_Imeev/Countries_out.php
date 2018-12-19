@@ -11,7 +11,7 @@
 	    or die('Error: Unable to connect: ' . mysqli_connect_error());
 	printf('<P>Succesfully connected!</P> %s',"\n");
 	
-	$SQLquery = 'SELECT Country.ID,Country.Name,Cities.Name FROM Country JOIN Cities ON Cities.Country=Country.ID';
+	$SQLquery = 'SELECT Country.ID,Country.Name,Cities.Name FROM Country JOIN Cities ON Country.ID=Cities.Country';
 	$SQLresult = mysqli_query($link,$SQLquery);
 
 	printf('<table cellspacing=\' 0 \' border=\' 1 \'> %s',"\n");
