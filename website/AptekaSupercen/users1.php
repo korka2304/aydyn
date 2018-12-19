@@ -50,7 +50,7 @@
 					?>
 				</select>
 				<br>
-            		  	<input type="submit" value="Add Book">
+            		  	<input type="submit" value="Add">
       			  </form>
 			</TD>
 		</TR>
