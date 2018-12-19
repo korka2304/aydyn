@@ -14,7 +14,7 @@
 	printf('<P>Succesfully connected!</P> %s',"\n");
 	
 	// Выполняем SQL-запрос
-	$SQLquery = 'SELECT * FROM doctors';
+	$SQLquery = 'SELECT * FROM Doctors';
 	$SQLresult = mysqli_query($link,$SQLquery);
 
 	printf('<table cellspacing=\' 0 \' border=\' 1 \'> %s',"\n");
