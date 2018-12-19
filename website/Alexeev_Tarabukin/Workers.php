@@ -17,7 +17,7 @@
 	$SQLresult = mysqli_query($link,$SQLquery);
 	while ($result = mysqli_fetch_array($SQLresult,MYSQLI_NUM))
 	{
-		printf('<P>Worker %d:  %s %s %s science degree: %d </P>',$result[0],$result[1],$result[2],$result[3]);
+		printf('<P>Worker %d: %s %s %s science degree: %d </P>',$result[0],$result[1],$result[2],$result[3]);
 	}
 	// Žá¢®¡®¦¤ ¥¬ ¯ ¬ïâì ®â à¥§ã«ìâ â 
 	mysqli_free_result($SQLresult);

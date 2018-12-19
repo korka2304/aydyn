@@ -5,13 +5,13 @@
  </head>
  <body>
     <?php
-	printf('<P>Countries:</P> %s',"\n");
+	printf('<P>Countries v1.0:</P> %s',"\n");
 	
 	$link = mysqli_connect('10.14.129.132', 'LebedkinAnatolij', 'QFbg8V97', 'LebedkinAnatolijDB')
 	    or die('Error: Unable to connect: ' . mysqli_connect_error());
 	printf('<P>Succesfully connected!</P> %s',"\n");
 	
-	$SQLquery = 'SELECT Country.ID,Country.Name,Cities.Name FROM Country JOIN Cities ON Cities.Country=Country.ID';
+	$SQLquery = 'SELECT Country.ID,Country.Name,Cities.Name FROM Country LEFT JOIN Cities ON Country.ID=Cities.Country';
 	$SQLresult = mysqli_query($link,$SQLquery);
 
 	printf('<table cellspacing=\' 0 \' border=\' 1 \'> %s',"\n");
@@ -24,7 +24,7 @@
 	while ($result = mysqli_fetch_array($SQLresult,MYSQLI_NUM))
 	{
 		printf('<TR>');
-		printf('<TD> %s </TD> <TD>%s</TD>',$result[0],$result[1],$result[2]);
+		printf('<TD> %s </TD> <TD>%s</TD><TD>%s</TD>',$result[0],$result[1],$result[2]);
 		printf('</TR> %s',"\n");
 	}
 	printf('</table> %s',"\n");
