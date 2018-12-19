@@ -11,7 +11,7 @@
 	    or die('Error: Unable to connect: ' . mysqli_connect_error());
 	printf('<P>Succesfully connected!</P> %s',"\n");
 	
-	$SQLquery = 'SELECT `DrugsNew`.ID,`DrugsNew`.Name FROM `DrugsNew` INNER JOIN `Makers` on `DrugsNew`.Maker=`Makers`.ID INNER JOIN `Medicine` on `DrugsNew`.Medicine=`Medicine`.ID';
+	$SQLquery = 'SELECT `DrugsNew`.ID,`DrugsNew`.Name,`Makers`.Name,`Medicine`.Name FROM `DrugsNew` INNER JOIN `Makers` on `DrugsNew`.Maker=`Makers`.ID INNER JOIN `Medicine` on `DrugsNew`.Medicine=`Medicine`.ID';
 	$SQLresult = mysqli_query($link,$SQLquery);
 
 	printf('<table cellspacing=\' 0 \' border=\' 1 \'> %s',"\n");
