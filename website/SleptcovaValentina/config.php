@@ -1,6 +1,6 @@
 <?php
-$server = '10.14.129.132';
-$user='SlepcovaValentina';
+$server = 'localhost';
+$user='Slepcova';
 $password='Dc6LZquV';
-$database='SlepcovaValentinaDB';
+$database='SlepcovaDB';
 ?>
