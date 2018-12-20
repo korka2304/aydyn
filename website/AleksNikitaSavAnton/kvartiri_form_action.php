@@ -19,16 +19,16 @@ echo $kratk;
 echo $4i4;
 echo $komissia;
 
-//$SQLquery = "INSERT INTO kvartiti (id_kvartiri, adres, ploshad, count_komnat, etazh, kratk, 4i4, komissia) VALUES ((SELECT max(id_kvartiri)+1 from (Select id_kvartiri from kvartiti) as id_kvartiri), $adres,'$ploshad',$count_komnat, $etazh, $kratk, $4i4, $komissia)";
-//echo '<BR> SQL query: ';
-//echo $SQLquery;
+$SQLquery = "INSERT INTO kvartiri (id_kvartiri, adres, ploshad, count_komnat, etazh, kratk, 4i4, komissia) VALUES ((SELECT max(id_kvartiri)+1 from (Select id_kvartiri from kvartiri) as id_kvartiri), $adres,'$ploshad',$count_komnat, $etazh, $kratk, $4i4, $komissia)";
+echo '<BR> SQL query: ';
+echo $SQLquery;
 
-//if (mysqli_query($link, $SQLquery)) {
-    //echo "<BR>New record created successfully";
-//} else {
-    //echo "<BR>Error: " . $sql . "<br>" . mysqli_error($link);
-//}
+if (mysqli_query($link, $SQLquery)) {
+    echo "<BR>New record created successfully";
+} else {
+    echo "<BR>Error: " . $sql . "<br>" . mysqli_error($link);
+}
 
-//mysqli_close($link);
+mysqli_close($link);
 
 ?>

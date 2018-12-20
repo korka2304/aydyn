@@ -5,7 +5,7 @@
  </head>
  <body>
 	<?php
-	printf('<P>Hello world! Searching for every doctor we have here:</P> %s',"\n");
+	printf('<P>Hello world! Searching for patients sessions:</P> %s',"\n");
 	// Соединяемся, выбираем базу данных VER3
 
 	include('config.php');	
@@ -14,26 +14,22 @@
 	printf('<P>Succesfully connected!</P> %s',"\n");
 	
 	// Выполняем SQL-запрос
-	$SQLquery = 'SELECT * FROM Doctors';
+	$SQLquery = 'SELECT * FROM visitdoctor';
 	$SQLresult = mysqli_query($link,$SQLquery);
 
 	printf('<table cellspacing=\' 0 \' border=\' 1 \'> %s',"\n");
 	printf('<TR> %s',"\n");
 	printf('	<TH>id</TH> %s',"\n");
-	printf('	<TH>FIO</TH> %s',"\n");
-	printf('	<TH>Pasport</TH> %s',"\n");
-	printf('	<TH>Stepen</TH> %s',"\n");
-        printf('	<TH>Diploma</TH> %s',"\n");
-	printf('	<TH>Time of work</TH> %s',"\n");
-	printf('	<TH>Cabinet</TH> %s',"\n");
-
+	printf('	<TH>Patients_id</TH> %s',"\n");
+	printf('	<TH>Doctors_id</TH> %s',"\n");
+	printf('	<TH>result</TH> %s',"\n");
+	printf('	<TH>date</TH> %s',"\n");
 	printf('</TR> %s',"\n");
 
-
-	while ($result = mysqli_fetch_array($SQLresult,MYSQLI_NUM))
+        while ($result = mysqli_fetch_array($SQLresult,MYSQLI_NUM))
 	{
 		printf('<TR>');
-		printf('<TD> %s </TD> <TD>%s</TD> <TD> %s </TD> <TD>%s</TD> <TD>%s</TD> <TD>%s</TD> <TD>%s</TD>',$result[0],$result[1],$result[2],$result[3],$result[4],$result[5],$result[6]);
+		printf('<TD> %d </TD> <TD> %d </TD> <TD> %d </TD> <TD> %s </TD> <TD> %s </TD>',$result[0],$result[1],$result[2],$result[3],$result[4]);
 		printf('</TR> %s',"\n");
 	}
 	printf('</table> %s',"\n");

@@ -1,34 +1,33 @@
 <html>
  <head>
-  <title>WEB-site of the Sletcova National Library</title>
+  <title>WEB-site of the GG Polyclinic</title>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
  </head>
  <body>
 	<?php
-	printf('<P>Hello world! Searching for every book:</P> %s',"\n");
+	printf('<P>Hello there!</P> %s',"\n");
 	// Соединяемся, выбираем базу данных VER3
-
-	include('config.php');	
-	$link = mysqli_connect($server, $user, $password, $database)
+	
+	$link = mysqli_connect('10.14.129.132', 'GurinovAjtal', 'CB5LagBA','GurinovAjtalDB')
 	    or die('Error: Unable to connect: ' . mysqli_connect_error());
-	printf('<P>Succesfully connected!</P> %s',"\n");
+	printf('<P>Successfully connected!</P> %s',"\n");
 	
 	// Выполняем SQL-запрос
-	$SQLquery = 'SELECT * FROM authors INNER JOIN books on books.AuthorID=authors.AuthorID';
+	$SQLquery = 'SELECT * FROM Spec';
 	$SQLresult = mysqli_query($link,$SQLquery);
 
-	printf('<table cellspacing=\' 0 \' border=\' 1 \'> %s',"\n");
+	printf('<table cellspacing=\' 10 \' border=\' 1 \'> %s',"\n");
 	printf('<TR> %s',"\n");
-	printf('	<TH>First Name</TH> %s',"\n");
-	printf('	<TH>Family Name</TH> %s',"\n");
-	printf('	<TH>Book</TH> %s',"\n");
+	printf('	<TH>idSpec</TH> %s',"\n");
+	printf('	<TH>Spec Name</TH> %s',"\n");
+	printf('	<TH>Cab.</TH> %s',"\n");
 	printf('</TR> %s',"\n");
 
 
 	while ($result = mysqli_fetch_array($SQLresult,MYSQLI_NUM))
 	{
 		printf('<TR>');
-		printf('<TD> %s </TD> <TD>%s</TD> <TD> %s (%d) </TD>',$result[1],$result[2],$result[5],$result[6]);
+		{printf('<TD> %d </TD> <TD>%s</TD> <TD>%d</TD>',$result[0],$result[1],$result[2]);}
 		printf('</TR> %s',"\n");
 	}
 	printf('</table> %s',"\n");

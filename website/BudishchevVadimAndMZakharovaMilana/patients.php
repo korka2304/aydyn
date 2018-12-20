@@ -14,11 +14,12 @@
 	printf('<P>Succesfully connected!</P> %s',"\n");
 	
 	// Выполняем SQL-запрос
-	$SQLquery = 'SELECT FIO,Pasport FROM patients';
+	$SQLquery = 'SELECT * FROM patients';
 	$SQLresult = mysqli_query($link,$SQLquery);
 
 	printf('<table cellspacing=\' 0 \' border=\' 1 \'> %s',"\n");
 	printf('<TR> %s',"\n");
+	printf('	<TH>ID</TH> %s',"\n");
 	printf('	<TH>FIO</TH> %s',"\n");
 	printf('	<TH>Pasport</TH> %s',"\n");
 	printf('</TR> %s',"\n");
@@ -27,7 +28,7 @@
 	while ($result = mysqli_fetch_array($SQLresult,MYSQLI_NUM))
 	{
 		printf('<TR>');
-		printf('<TD> %s </TD> <TD>%s</TD> <TD> %s (%d) </TD>',$result[1],$result[2],$result[5],$result[6]);
+		printf('<TD> %d </TD> <TD> %s </TD> <TD>%s</TD>',$result[0],$result[1],$result[2]);
 		printf('</TR> %s',"\n");
 	}
 	printf('</table> %s',"\n");
