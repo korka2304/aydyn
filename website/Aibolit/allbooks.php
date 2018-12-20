@@ -21,7 +21,7 @@
 	printf('	<TH>Doctor</TH> %s',"\n");
 	printf('	<TH>Degree</TH> %s',"\n");
 	printf('	<TH>Specialty</TH> %s',"\n");
-	printf('	<TH>Speciality</TH> %s',"\n");
+	printf('	<TH>Time</TH> %s',"\n");
 	printf('	<TH>Passport</TH> %d',"\n");
 	printf('</TR> %s',"\n");
 
