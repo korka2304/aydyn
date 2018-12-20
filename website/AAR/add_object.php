@@ -1,11 +1,25 @@
+<!DOCTYPE html>
 <html>
- <head>
-  <title>WEB-site of the Sletcova National Library</title>
-  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
- </head>
-
- <body>
- 	<table width="100%" cellspacing="0" border="1">	
+<head>
+	<meta charset="utf-8">
+	<title>Horchoev_Burtsev</title>
+	<link rel="stylesheet" type="text/css" href="sitecss.css">
+	<link rel="shortcut icon" href="logo.png" type="image/png" >
+</head>
+<body>
+	<div class="container">
+		<div class="header">
+				Welcome to Horchoev_Burtsev site.
+				<p> Please feel free to browse thorugh the site.</p>
+		</div>
+		<div class="sidebar">
+        <a href="allcustomers.php"> <P>All customers</P> </a>
+        <a href="allobjects.php"> <P>All objects</P> </a>
+        <a href="photos.php"> <P>photos</P> </a>
+        <a href="add_object.php"> <P>add object</P> </a>
+		</div>
+		<div class="content">
+			 	<table width="100%" cellspacing="0" border="1">	
 		<TR>
 			<TH>Table column 1</TH>
 		</TR>
@@ -59,5 +73,10 @@
 ?>
 <BR>
 <a href="index.html"> <P>GO BACK</P> </a>
- </body>
+		</div>
+		<div class="footer">
+			&copy; Horchoev_Burtsev 2018
+		</div>
+	</div>
+</body>
 </html>
