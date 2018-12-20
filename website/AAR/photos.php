@@ -57,13 +57,14 @@
 			  <img src=<?php echo $varA;?> alt="This is how my library will look like" />			
 			</TD>
 		</TR>
+</table>
 <BR>
 
 <a href="index.html"> <P>GO BACK</P> </a>
 		</div>
-		<footer><div class="footer">
+		<div class="footer">
 			&copy; Horchoev_Burtsev 2018
-		</div></footer>
+		</div>
 	</div>
 </body>
 </html>
