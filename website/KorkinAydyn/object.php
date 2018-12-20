@@ -26,8 +26,8 @@ printf('	<TH>komisia</TH> %s',"\n");
 while ($result = mysqli_fetch_array($SQLresult,MYSQLI_NUM))
 	{
 		printf('<TR>');
-		printf('<TD> %s </TD> <TD>etaz %d (komnat %d)</TD> <TD>opisanie %s </TD>, 
-<TD>url photo %s</TD>,<TD> passport %d</TD>,<TD> komisia %d</TD>',$result[0],$result[1],$result[2],$result[3],$result[5],$result[6],$result[7]);
+		printf('<TD> %s </TD> <TD>%d </TD> <TD>%d</TD> <TD> %s </TD> 
+<TD> %s</TD> <TD> %d</TD> <TD> %d</TD>',$result[0],$result[1],$result[2],$result[3],$result[5],$result[6],$result[7]);
 		printf('</TR> %s',"\n");
 	}
 	printf('</table> %s',"\n");

@@ -23,7 +23,7 @@ printf('<table cellspacing=\' 0 \' border=\' 1 \'> %s',"\n");
 while ($result = mysqli_fetch_array($SQLresult,MYSQLI_NUM))
 	{
 		printf('<TR>');
-		printf('<TD> %d </TD> <TD>%d </TD> %d</TD> <TD> %D </TD> ',$result[0],$result[1],$result[2],$result[3]);
+		printf('<TD> %d </TD> <TD>%d </TD> %d</TD> <TD> %d </TD> ',$result[0],$result[1],$result[2],$result[3]);
 		printf('</TR> %s',"\n");
 	}
 	printf('</table> %s',"\n");
