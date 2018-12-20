@@ -1,11 +1,11 @@
 <html>
  <head>
-  <title>Seancy</title>
+  <title>Seansy</title>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
  </head>
  <body>
 	<?php
-	printf('<P>Spisok seancov:</P> %s',"\n");
+	printf('<P>Spisok seansov:</P> %s',"\n");
 	// ������塞��, �롨ࠥ� ���� ������ VER3
 	
 	$link = mysqli_connect('10.14.129.132', 'EgorovaTatyana', 'zEdAkFNC','EgorovaTatyanaDB')
@@ -28,7 +28,7 @@
 	while ($result = mysqli_fetch_array($SQLresult,MYSQLI_NUM))
 	{
 		printf('<TR>');
-		printf('<TD> %d </TD> <TD> %d </TD> <TD> %s </TD> <TD> %s </TD>',$result[0],$result[1],$result[2],$result[3]);
+		printf('<TD> %d </TD> <TD> %d </TD> <TD> %s </TD> <TD> %d </TD>',$result[0],$result[1],$result[2],$result[3]);
 		printf('</TR> %s',"\n");
 	}
 	printf('</table> %s',"\n");
