@@ -1,10 +1,25 @@
+<!DOCTYPE html>
 <html>
- <head>
-  <title>WEB-site of the Sletcova National Library</title>
-  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
- </head>
- <body>
-	<?php
+<head>
+	<meta charset="utf-8">
+	<title>Horchoev_Burtsev</title>
+	<link rel="stylesheet" type="text/css" href="sitecss.css">
+	<link rel="shortcut icon" href="logo.png" type="image/png" >
+</head>
+<body>
+	<div class="container">
+		<div class="header">
+				Welcome to Horchoev_Burtsev site.
+				<p> Please feel free to browse thorugh the site.</p>
+		</div>
+		<div class="sidebar">
+        <a href="allcustomers.php"> <P>All customers</P> </a>
+        <a href="allobjects.php"> <P>All objects</P> </a>
+        <a href="photos.php"> <P>photos</P> </a>
+        <a href="add_object.php"> <P>add object</P> </a>
+		</div>
+		<div class="content">
+			<?php
 	printf('<P>Hello world! Searching for every customer:</P> %s',"\n");
 	
 	$link = mysqli_connect('10.14.129.132', 'HorchoevArtur', 'we4DGTeQ','HorchoevArturDB')
@@ -45,5 +60,10 @@
 <BR>
 
 <a href="index.html"> <P>GO BACK</P> </a>
- </body>
+		</div>
+		<footer><div class="footer">
+			&copy; Horchoev_Burtsev 2018
+		</div></footer>
+	</div>
+</body>
 </html>
