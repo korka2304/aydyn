@@ -10,9 +10,11 @@ git add -A
 
 git commit -a -m "comething new"
 
+echo Применение коммита, мерж локальных измнений в удаленный репозиторий
+
+git push origin master
+
 echo Объединяем все изменения из удаленного репозитория с локальной версией
 
 git pull origin master
 
-echo Применение коммита, мерж локальных измнений в удаленный репозиторий
-git push origin master
