@@ -71,7 +71,9 @@
 	<?php
 
 ?>
+</table>
 <BR>
+
 <a href="index.html"> <P>GO BACK</P> </a>
 		</div>
 		<div class="footer">
