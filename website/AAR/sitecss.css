@@ -30,6 +30,7 @@ h2 {
     float: left; /* Обтекание по правому краю */
    }
 .content {
+  height: 100%;
     margin-left: 130px; /* Отступ слева */
     padding: 10px; /* Поля вокруг текста */
     background: #fff; /* Цвет фона правой колонки */
