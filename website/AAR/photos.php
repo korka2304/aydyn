@@ -61,9 +61,9 @@
 
 <a href="index.html"> <P>GO BACK</P> </a>
 		</div>
-		<div class="footer">
+		<footer><div class="footer">
 			&copy; Horchoev_Burtsev 2018
-		</div>
+		</div></footer>
 	</div>
 </body>
 </html>
