@@ -9,7 +9,7 @@ printf('<P>Hello World! object  </P>');
 
 include('config.php');	
 $link = mysqli_connect($server, $user, $password, $database) or die('Error! You suck!'.mysqli_connect_error());
-echo '<P>Successfully connected<\P>';
+echo '<P>Successfully connected</P>';
 
 $SQLquery = 'SELECT * FROM Arenda';
 $SQLresult = mysqli_query($link,$SQLquery);
