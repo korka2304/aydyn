@@ -13,7 +13,7 @@
 				<p> Please feel free to browse thorugh the site.</p>
 		</div>
 		<div class="sidebar">
-			<P>Навигация</P><br>
+        			<P>Навигация</P><br>
         <a href="allcustomers.php"> <P>Клиенты</P> </a>
         <a href="allobjects.php"> <P>Объекты</P> </a>
         <a href="photos.php"> <P>Фотографии</P> </a>
@@ -28,7 +28,7 @@
 		<TR>
 			<TD>
 			  <P>Add object:</P>
-			  <form action="add_object_form.php" method="post">
+			  <form action="add_customer_form.php" method="post">
 					adress: <input type="text" name="adress">
           		  	<br>
 					square: <input type="text" name="square">
@@ -75,12 +75,13 @@
 ?>
 </table>
 <BR>
-
 <a href="index2.html"> <P>На главную</P> </a>
 		</div>
+		
 		<div class="footer">
 			&copy; Horchoev_Burtsev 2018
 		</div>
+
 	</div>
 </body>
 </html>
