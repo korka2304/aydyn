@@ -1,11 +1,11 @@
 <html>
  <head>
-  <title>WEB-site of the Sletcova National Library</title>
+  <title>WEB-site</title>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
  </head>
  <body>
 	<?php
-	printf('<P>Hello world! List of Library users:</P>');
+	printf('<P>Hello world!:</P>');
 	// Соединяемся, выбираем базу данных VER3
 	include('config.php');	
 	$link = mysqli_connect($server, $user, $password, $database)
