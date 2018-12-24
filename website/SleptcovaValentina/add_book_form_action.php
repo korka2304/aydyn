@@ -12,7 +12,7 @@ $book_year = mysqli_real_escape_string($link, $_POST['book_year']);
 echo $book_authorid;
 echo $book_title;
 echo $book_year;
-$SQLquery = "INSERT INTO books (BookID, AuthorID, Title, Year) VALUES ((SELECT max(BookID)+1 from (Select BookID from books) as ID), $book_authorid,'$book_title',$book_year)";
+$SQLquery = "INSERT INTO books (BookID, AuthorID, Title, Year) VALUES ((SELECT IFNULL(max(BookID)+1,1) from (Select BookID from books) as ID), $book_authorid,'$book_title',$book_year)";
 echo '<BR> SQL query: ';
 echo $SQLquery;
 
