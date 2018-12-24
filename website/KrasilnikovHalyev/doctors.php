@@ -12,20 +12,21 @@
 	    or die('Error: Unable to connect: ' . mysqli_connect_error());
 	printf('<P>Succesfully connected!</P> %s',"\n");
 	
-	$SQLquery = 'SELECT * FROM patient';
+	$SQLquery = 'SELECT * FROM doctor';
 	$SQLresult = mysqli_query($link,$SQLquery);
 
 	printf('<table cellspacing=\' 0 \' border=\' 1 \'> %s',"\n");
 	printf('<TR> %s',"\n");
+	printf('	<TH>Family name</TH> %s',"\n");
 	printf('	<TH>Name</TH> %s',"\n");
-	printf('	<TH>family_name</TH> %s',"\n");
+	printf('	<TH>Merits</TH>%s',"\n")
 	printf('</TR> %s',"\n");
 
 
 	while ($result = mysqli_fetch_array($SQLresult,MYSQLI_NUM))
 	{
 		printf('<TR>');
-		printf('<TD> %s </TD> <TD> %s </TD> ',$result[2],$result[3]);
+		printf('<TD> %s </TD> <TD> %s </TD> <TD> %s </TD> ',$result[1],$result[2]$result[4]);
 		printf('</TR> %s',"\n");
 	}
 	printf('</table> %s',"\n");
