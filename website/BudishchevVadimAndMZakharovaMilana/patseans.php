@@ -14,7 +14,7 @@
 	printf('<P>Succesfully connected!</P> %s',"\n");
 	
 	// Выполняем SQL-запрос
-	$SQLquery = 'SELECT * FROM patseans INNER JOIN Doctors on patients.id = patseans.patients_id';
+	$SQLquery = 'SELECT * FROM patseans INNER JOIN patients on patients.id = patseans.patients_id';
 	$SQLresult = mysqli_query($link,$SQLquery);
 
 	printf('<table cellspacing=\' 0 \' border=\' 1 \'> %s',"\n");
