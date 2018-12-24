@@ -79,7 +79,7 @@
 <a href="index2.html"> <P>На главную</P> </a>
 		</div>
 		<div class="footer">
-			&copy; Horchoev_Burtsev 2018
+			&copy; Horchoev_Burtsev 2018.  все вопросы по телефону 8(800)123456
 		</div>
 	</div>
 </body>
