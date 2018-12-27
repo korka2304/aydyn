@@ -23,6 +23,8 @@ printf('	<TH>Adress</TH> %s',"\n");
 printf('	<TH>srok</TH> %s',"\n");
 
 	printf('</TR> %s',"\n");
+	 <TD>
+
 while ($result = mysqli_fetch_array($SQLresult,MYSQLI_NUM))
 	{
 		printf('<TR>');
@@ -30,7 +32,10 @@ while ($result = mysqli_fetch_array($SQLresult,MYSQLI_NUM))
 		printf('</TR> %s',"\n");
 	}
 	printf('</table> %s',"\n");
-
+	 <form>
+<input type="button" value="Add Author" onClick='location.href="add_author.html"'>
+		 </form>
+		 </TD>
 mysqli_free_result($SQLresult);
 mysqli_close($link);
 
